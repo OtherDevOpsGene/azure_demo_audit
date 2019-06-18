@@ -22,6 +22,10 @@ when 'windows'
     'name': 'windows level1',
     'compliance': 'ggotimer/cis-windows2012r2-level1-memberserver'
   )
+  node.default['audit']['profiles'].push(
+    'name': 'windows level2',
+    'compliance': 'ggotimer/cis-windows2012r2-level2-memberserver'
+  )
 end
 
 node.default['audit']['interval'] = {
