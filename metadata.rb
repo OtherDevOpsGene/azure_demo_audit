@@ -4,7 +4,7 @@ maintainer_email 'Eugene.Gotimer@tsa.dhs.gov'
 license 'All Rights Reserved'
 description 'Installs/Configures demo_audit'
 long_description 'Installs/Configures demo_audit'
-version '0.14.0'
+version '0.15.0'
 chef_version '>= 14.0'
 
 depends 'audit'
