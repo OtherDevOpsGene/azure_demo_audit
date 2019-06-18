@@ -15,8 +15,4 @@ depends 'audit'
 #
 # issues_url 'https://github.com/<insert_org_here>/demo_audit/issues'
 
-# The `source_url` points to the development repository for this cookbook.  A
-# `View Source` link will be displayed on this cookbook's page when uploaded to
-# a Supermarket.
-#
-# source_url 'https://github.com/<insert_org_here>/demo_audit'
+source_url 'https://github.com/gotimer/azure_demo_audit.git'
