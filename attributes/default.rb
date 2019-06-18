@@ -5,20 +5,16 @@
 # Copyright:: 2019, The Authors, All Rights Reserved.
 
 node.default['audit']['reporter'] = 'chef-server-automate'
+node.default['audit']['fetcher'] = 'chef-server'
 
-case node['platform']
-when 'windows'
-  node.default['audit']['profiles'] = [
-    {
-      name: 'windows profile',
-      compliance: 'ggotimer/cis-windows2012r2-level1-memberserver',
-    },
-  ]
-when 'ubuntu'
-  node.default['audit']['profiles'] = [
-    {
-      name: 'ubuntu',
-      compliance: 'ggotimer/cis-ubuntu-16.04lts-level1-workstation',
-    },
-  ]
-end
+node.default['audit']['profiles'].push(
+  'name': 'centos level1',
+  'compliance': 'ggotimer/cis-centos7-level1'
+)
+node.default['audit']['profiles'].push(
+  'name': 'centos level2',
+  'compliance': 'ggotimer/cis-centos7-level2'
+)
+node.default['audit']['interval'] = {
+  'enabled': false
+}
